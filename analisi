@@ -1,4 +1,5 @@
 Login file già esistente, come logout e svuota. 
+Logout già scritto interamente.
 Index è il punto di riferimento. 
 I nomi dei file e la descrizione del progetto sono presenti nella consegna dell'esercizio, ovvero il file pdf nel progetto.
 
@@ -11,3 +12,25 @@ $_SESSION["carrello"] = array("brand"=>"Ford", "model"=>"Mustang", "year"=>1964)
 $_SESSION["quan"] = "quantita";
 
 Parte di codice di controllo già precedentemente scritta. 
+
+Ordine scrittura file:
+login 
+check login 
+index
+svuota
+logout 
+carrello 
+update_quantita
+
+Suddivisione lavori: 
+Trizzino
+login
+logout
+svuota
+check login
+
+
+Camponogara
+index
+carrello
+update quantita
