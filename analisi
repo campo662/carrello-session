@@ -1,0 +1,13 @@
+Login file già esistente, come logout e svuota. 
+Index è il punto di riferimento. 
+I nomi dei file e la descrizione del progetto sono presenti nella consegna dell'esercizio, ovvero il file pdf nel progetto.
+
+
+Nomi all'interno della session:
+$_SESSION["user"] = "nomeutente";
+$_SESSION["controllo"] = "controllo"; //valore booleano
+$_SESSION["lista_prodotti"] = array("brand"=>"Ford", "model"=>"Mustang", "year"=>1964);
+$_SESSION["carrello"] = array("brand"=>"Ford", "model"=>"Mustang", "year"=>1964);
+$_SESSION["quan"] = "quantita";
+
+Parte di codice di controllo già precedentemente scritta. 
