@@ -1,18 +1,52 @@
 <?php
-    session_start(); // apertura sessione
-    
+    session_start();
+
+    // controllo login
     if(!isset($_SESSION["controllo"])){
-        header("Location: login.php");
         session_destroy();
+        header("Location: login.php");
         exit();
     }
-    
-    $_SESSION["lista_prodotti"] = array(
-        "Banane"=>2.5, 
-        "Ciliegie"=>4, 
-        "Arance"=>3, 
-        "Braciole"=>12, 
-        "Yogurt"=>6);
+
+    // lista prodotti
+    $_SESSION["lista_prodotti"] = [
+        "Banane" => 2.5,
+        "Ciliegie" => 4,
+        "Arance" => 3,
+        "Braciole" => 12,
+        "Yogurt" => 6
+    ];
+
+    // carrello
+    if(!isset($_SESSION["carrello"])) {
+        $_SESSION["carrello"] = [];
+    }
+
+    // gestione bottoni
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+        if(isset($_POST["aggiungi"])) {
+            $prod = $_POST["aggiungi"];
+            if(isset($_SESSION["carrello"][$prod])) {
+                $_SESSION["carrello"][$prod] = $_SESSION["carrello"][$prod] + 1;
+            } 
+            else {
+                $_SESSION["carrello"][$prod] = 1;
+            }
+        }
+
+        if(isset($_POST["rimuovi"])) {
+            $prod = $_POST["rimuovi"];
+            if(isset($_SESSION["carrello"][$prod])){
+
+                $_SESSION["carrello"][$prod]--;
+
+                if($_SESSION["carrello"][$prod] <= 0){
+                    unset($_SESSION["carrello"][$prod]);
+                }
+            }
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -20,16 +54,36 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Carrello della spesa - pagina principale</title>
+        <title>Carrello della spesa</title>
     </head>
     <body>
-        <h3>Carrello della spesa</h3>
-        <hr>
-        <h3>Lista dei prodotti disponibili</h3>
-        <?php
-            foreach($_SESSION["lista_prodotti"] as $prod => $prezzo){
-                echo("Prodotto: $prod  $prezzo €<br>");
-            }
+
+    <h3>Prodotti disponibili</h3>
+
+    <?php foreach($_SESSION["lista_prodotti"] as $prod => $prezzo){
+        echo"$prod - $prezzo €";
         ?>
+
+        <form method="POST" style="display:inline;">
+            <button name="aggiungi" value="<?= $prod ?>">+</button>
+        </form>
+
+        <form method="POST" style="display:inline;">
+            <button name="rimuovi" value="<?= $prod ?>">-</button>
+        </form>
+
+        <br>
+
+        <?php 
+        } 
+    ?>
+
+    <br>
+    <hr>
+
+    <h3>Possibili azioni</h3>
+    <form method="POST" action="carrello.php">
+        <button type="submit">Visualizza riepilogo carrello</button>
+    </form>
     </body>
 </html>
