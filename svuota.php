@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="it">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Informazioni</title>
-    </head>
-    <body>
-        <h3>Informazioni</h3>
-    </body>
-</html>
+<?php
+session_start();
+
+// Il carrello viene svuotato
+if (isset($_SESSION["carrello"])) {
+    unset($_SESSION["carrello"]);
+}
+
+// ritorno alla pagina del carrello
+header("Location: carrello.php");
+exit;
