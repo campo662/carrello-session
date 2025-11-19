@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html lang="it">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Informazioni</title>
-    </head>
-    <body>
-        <h3>Informazioni</h3>
-    </body>
-</html>
+<?php
+    session_start();
+    
+    // Elimino tutte le variabili di sessione
+    session_unset();
+    
+    // Distruggo completamente la sessione
+    session_destroy();
+    
+    // Reindirizzo al login
+    header("Location: login.php");
+    exit;
+?>
