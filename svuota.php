@@ -1,11 +1,13 @@
 <?php
-session_start();
+    session_start(); // apertura sessione
+    
+    if(!isset($_SESSION["controllo"])){
+        session_destroy();
+        header("Location: login.php");
+        exit();
+    }
 
-// Il carrello viene svuotato
-if (isset($_SESSION["carrello"])) {
-    unset($_SESSION["carrello"]);
-}
-
-// ritorno alla pagina del carrello
-header("Location: carrello.php");
-exit;
+    session_unset();
+    $_SESSION["controllo"]=true;
+    header("Location: carrello.php");
+?>
