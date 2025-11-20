@@ -1,5 +1,5 @@
 <?php
-	if (isset($_SESSION['loggato']) && $_SESSION['loggato'] === true) {
+	if (isset($_SESSION['controllo']) && $_SESSION['controllo'] === true) {
 			// Reindirizza l'utente alla pagina index
 			header("Location: index.php");
 			exit;
@@ -16,7 +16,7 @@
 			if ($username === $username_valido && $password === $password_valida) {
 				
 				// Login corretto: Imposta le variabili di sessione
-				$_SESSION['loggato'] = true; // Flag per lo stato di accesso
+				$_SESSION['controllo'] = true; // Flag per lo stato di accesso
 				$_SESSION['username'] = $username;
 
 				// vai pagina index
@@ -28,3 +28,4 @@
 			}
 		}
 ?>		
+
