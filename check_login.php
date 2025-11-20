@@ -2,7 +2,7 @@
 session_start();
 
 //vai in index
-if (isset($_SESSION['controllo']) && $_SESSION['controllo'] === true) {
+if (isset($_SESSION["controllo"]) && $_SESSION["controllo"] === true) {
     header("Location: index.php");
     exit;
 }
@@ -13,14 +13,14 @@ $pass = "vosso";
 // Quando viene inviato il form
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = $_POST["username"];
+    $password = $_POST["password"];
 
     // Verifica credenziali
     if ($username === $user && $password === $pass) {
 
-        $_SESSION['loggato'] = true;
-        $_SESSION['username'] = $username;
+        $_SESSION["controllo"] = true;
+        $_SESSION["username"] = $username;
 
         header("Location: index.php");
         exit;
@@ -34,4 +34,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
