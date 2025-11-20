@@ -1,14 +1,12 @@
 <?php
     session_start();
 
-    // controllo login
     if(!isset($_SESSION["controllo"])){
         session_destroy();
         header("Location: login.php");
         exit();
     }
 
-    // lista prodotti
     $_SESSION["lista_prodotti"] = [
         "Banane" => 2.5,
         "Ciliegie" => 4,
@@ -17,7 +15,6 @@
         "Yogurt" => 6
     ];
 
-    // carrello
     if(!isset($_SESSION["carrello"])) {
         $_SESSION["carrello"] = [];
     }
@@ -44,6 +41,9 @@
                 if($_SESSION["carrello"][$prod] <= 0){
                     unset($_SESSION["carrello"][$prod]);
                 }
+            }
+            else{
+                echo "<script>alert('Il prodotto $prod non è nel carrello.');</script>";
             }
         }
     }
