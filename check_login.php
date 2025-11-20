@@ -29,8 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<h3>Login Fallito</h3><hr>";
         echo "<p>Username o password errati.</p>";
         $errore_login = "Username o password errati.";
-        echo "<script>alert('$errore_login')</script>";
         echo "<br><button><a href='login.php'>Torna al login</a></button>";
     }
 }
 ?>
+
