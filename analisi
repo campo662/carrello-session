@@ -4,6 +4,7 @@ Index è il punto di riferimento (file più complesso).
 I nomi dei file e la descrizione del progetto sono presenti nella consegna dell'esercizio, ovvero il file pdf nel progetto
 Logout è un file interamente php (trasparente), come anche svuota.
 Check login è anch'esso solo php ma con scrittura a video (implementare css comune).
+Per comodità abbiamo deciso di non creare il file update quantità, e di inserire quella parte nel file index.
 
 
 Nomi all'interno della session:
