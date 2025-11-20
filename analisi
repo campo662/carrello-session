@@ -1,36 +1,50 @@
-Login file già esistente, come logout e svuota. 
+Login file già esistente, come logout e svuota, solo da modificare. 
 Logout già scritto interamente.
-Index è il punto di riferimento. 
-I nomi dei file e la descrizione del progetto sono presenti nella consegna dell'esercizio, ovvero il file pdf nel progetto.
+Index è il punto di riferimento (file più complesso). 
+I nomi dei file e la descrizione del progetto sono presenti nella consegna dell'esercizio, ovvero il file pdf nel progetto
+Logout è un file interamente php (trasparente).
+Check login è anch'esso solo php ma con scrittura a video (implementare css comune).
 
 
 Nomi all'interno della session:
 $_SESSION["user"] = "nomeutente";
+$_SESSION["pass"] = "passutente";
 $_SESSION["controllo"] = "controllo"; //valore booleano
-$_SESSION["lista_prodotti"] = array("brand"=>"Ford", "model"=>"Mustang", "year"=>1964);
-$_SESSION["carrello"] = array("brand"=>"Ford", "model"=>"Mustang", "year"=>1964);
 $_SESSION["quan"] = "quantita";
+$_SESSION["lista_prodotti"] = [
+        "Banane" => 2.5,
+        "Ciliegie" => 4,
+        "Arance" => 3,
+        "Braciole" => 12,
+        "Yogurt" => 6
+    ];
+banane è il nome del prodotto mentre 2.5 è il prezzo che esso ha 
 
-Parte di codice di controllo già precedentemente scritta. 
+$_SESSION["lista_prodotti"] = [
+        "Banane" => 2,
+        "Ciliegie" => 4,
+        "Braciole" => 2,
+        "Yogurt" => 9
+    ];
+banane è il nome del prodotto mentre 2 è la quantità acquistata.
+
+Parte di codice di controllo già precedentemente scritta. Serve solamente per l'accesso ai file.
 
 Ordine scrittura file:
 login 
 check login 
 index
+carrello 
 svuota
 logout 
-carrello 
-update_quantita
 
 Suddivisione lavori: 
 Trizzino
-login
-logout
-svuota
-check login
-
+- login
+- logout
+- check login
 
 Camponogara
-index
-carrello
-update quantita
+- index
+- carrello
+- svuota
