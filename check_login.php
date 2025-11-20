@@ -2,7 +2,7 @@
 session_start();
 
 //vai in index
-if (isset($_SESSION['loggato']) && $_SESSION['loggato'] === true) {
+if (isset($_SESSION['controllo']) && $_SESSION['controllo'] === true) {
     header("Location: index.php");
     exit;
 }
@@ -34,3 +34,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
