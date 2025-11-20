@@ -2,7 +2,7 @@ Login file già esistente, come logout e svuota, solo da modificare.
 Logout già scritto interamente.
 Index è il punto di riferimento (file più complesso). 
 I nomi dei file e la descrizione del progetto sono presenti nella consegna dell'esercizio, ovvero il file pdf nel progetto
-Logout è un file interamente php (trasparente).
+Logout è un file interamente php (trasparente), come anche svuota.
 Check login è anch'esso solo php ma con scrittura a video (implementare css comune).
 
 
