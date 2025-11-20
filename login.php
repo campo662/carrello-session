@@ -23,6 +23,61 @@
     <meta charset="UTF-8">
     <meta content="width=device-width,initial-scale=1.0">
     <title>Login al carrello</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2; /* colore piatto */
+			margin: 0;
+			padding: 20px;
+			line-height: 1.5;
+			text-align: center; /* tutto centrato */
+		}
+
+		
+		 h3{
+			color: #333;
+			margin-bottom: 20px;
+		}
+
+		
+		label {
+			font-size: 14px;
+			display: block;
+			margin-top: 10px;
+		}
+
+		
+		div {
+			margin-bottom: 10px;
+		}
+
+		
+		hr {
+			margin: 20px auto;
+			border: 0;
+			height: 1px;
+			background-color: #ccc;
+		}
+
+		
+		button {
+			padding: 8px 16px;
+			margin-top: 10px;
+			background-color: #007bff;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 14px;
+			display: inline-block;
+		}
+
+		button:hover {
+			background-color: #0056b3;
+		}
+
+	</style>
+    
 </head>
 <body>
 	<h3>Login</h3>
