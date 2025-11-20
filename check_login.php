@@ -33,48 +33,11 @@
         }
     }
 ?>
-<style>
-		body {
-			font-family: Arial, sans-serif;
-			background-color: #f2f2f2;
-			margin: 0;
-			padding: 20px;
-			line-height: 1.5;
-			text-align: center; 
-		}
-			
-		h3 {
-			color: #333;
-			margin-bottom: 20px;
-		}
-	
-		label {
-			font-size: 14px;
-			display: block;
-			margin-top: 10px;
-		}
-		
-		hr {
-			margin: 20px auto;
-			border: 0;
-			height: 1px;
-			background-color: #ccc;
-		}
-	
-		button {
-			padding: 8px 16px;
-			margin-top: 10px;
-			background-color: #007bff;
-			color: white;
-			border: none;
-			border-radius: 5px;
-			cursor: pointer;
-			font-size: 14px;
-			display: inline-block;
-		}
-	
-		button:hover {
-			background-color: #0056b3;
-		}
-</style>
-
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css.css">
+	</head>
+</html>
