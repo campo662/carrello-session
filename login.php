@@ -26,7 +26,7 @@
 </head>
 <body>
 	<h3>Login</h3>
-	<form action = "login.php" method = "POST">
+	<form action = "check_login.php" method = "POST">
 		<div>	
 			<label for ="username">Username:</label>
 			<input type ="text" id ="username" name ="username" required>
