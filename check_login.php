@@ -40,4 +40,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css.css">
 	</head>
+    <div class="esempio">
+            A cura di:
+            <br>
+            Tommaso Camponogara
+            <br>
+            Simone Trizzino
+        </div>
 </html>
