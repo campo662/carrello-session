@@ -58,34 +58,46 @@
         <title>Carrello della spesa</title>
     </head>
     <body>
+        <div id="titolo">
+            <h2>Gestione carrello</h2>
+        </div>
+        <hr>
 
-    <h3>Prodotti disponibili</h3>
+        <h3>Prodotti disponibili</h3>
 
-    <?php foreach($_SESSION["lista_prodotti"] as $prod => $prezzo){
-        echo"$prod - $prezzo €";
+        <?php foreach($_SESSION["lista_prodotti"] as $prod => $prezzo){
+            echo"$prod - $prezzo €";
+            ?>
+
+            <form method="POST" style="display:inline;">
+                <button name="aggiungi" value="<?= $prod ?>">+</button>
+            </form>
+
+            <form method="POST" style="display:inline;">
+                <button name="rimuovi" value="<?= $prod ?>">-</button>
+            </form>
+
+            <br>
+
+            <?php 
+            } 
         ?>
 
-        <form method="POST" style="display:inline;">
-            <button name="aggiungi" value="<?= $prod ?>">+</button>
-        </form>
-
-        <form method="POST" style="display:inline;">
-            <button name="rimuovi" value="<?= $prod ?>">-</button>
-        </form>
-
         <br>
+        <hr>
 
-        <?php 
-        } 
-    ?>
+        <h3>Possibili azioni</h3>
+        <form method="POST" action="carrello.php">
+            <button type="submit">Visualizza riepilogo carrello</button>
+        </form>
 
-    <br>
-    <hr>
-
-    <h3>Possibili azioni</h3>
-    <form method="POST" action="carrello.php">
-        <button type="submit">Visualizza riepilogo carrello</button>
-    </form>
+        <div class="esempio">
+            A cura di:
+            <br>
+            Tommaso Camponogara
+            <br>
+            Simone Trizzino
+        </div>
     </body>
 </html>
 
